@@ -1,0 +1,30 @@
+﻿@model Department
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Update" asp-controller="Department">
+            <div class="form-group">
+                <label asp-for="@Model.Code">Code</label>
+                <input asp-for="@Model.Code" class="form-control"  readonly />
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="@Model.Name">Name</label>
+                <input asp-for="@Model.Name" class="form-control"  readonly />
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="@Model.CreateAt">CreateAt</label>
+                <input asp-for="@Model.CreateAt" class="form-control"  readonly />
+            </div>
+            <br />
+            <input type="submit" class="btn btn-success" value="Update" />
+            <a class="btn btn-secondary" asp-action="Index">Back</a>
+        </form>
+    </div>
+</div>
